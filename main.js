@@ -58,7 +58,7 @@ async function gotMessage(message){
 			// .setFooter("Où est-ce que j'ai mis ma baguette ?")
 			.setURL('https://coworcoeur.blandeen.com/')
 			.setTitle(messageIntro)
-			.setDescription(hourChecked+ pickExcuse +' \n\nVoici ton GIF.\n\n Bisous \:heart: \:closed_umbrella:')          
+			.setDescription(hourChecked+ pickExcuse +' \n\nVoici ton GIF.\n\n Bisous \:heart: \:closed_umbrella:' +hour)          
 		);
 
 		message.channel.send(gif);
@@ -89,42 +89,42 @@ function checkHour(){
 	today = new Date();
 	// var hour = 10;
 	hour = today.getHours();
-	if (hour < 6 ) {
+	if (hour < 5 ) {
 		hourChecked = "Qui me réveille à cette heure ? Ah mais c'est toi " + authorMessage +" ! Bonjour, je te souhaite une bonne journée. N'hésite pas à dormir plus longtemps la prochaine fois.\n\nTu sais, l'avenir appartient à ceux qui rrrrzzzzzzzzzzzzzz.\n\nHein ?! Quoi?! Oh, mais j'y pense, je dois te laisser, ";
 		messageIntro = "Rrrrrrzzzz... Hein ?"
 	}
 
-	if (hour >= 6 && hour < 8) {
+	if (hour >= 5 && hour < 7) {
 		hourChecked = "Comment vas-tu " + authorMessage + " ? Tu es bien matinal.e aujourd'hui ! J'espère que tu es quand même assez reposé.es pour travailler. \n\nJe te souhaite une bonne journée, remplie de projets. Quant à moi, je te laisse, ";
 		messageIntro = "Bonjour !"
 	}
 
-	if (hour >= 8 && hour < 9) {
+	if (hour >= 7 && hour < 8) {
 		hourChecked = "J'espère que tu vas bien"+ authorMessage +". Il est bientôt 9h, il va falloir se mettre au travail. \n\nJe te souhaite une bonne journée, remplie de projet. Quant à moi, je te laisse, ";
 		messageIntro = "Bonjour !"
 	}
 
-	if (hour >= 9 && hour < 10) {
+	if (hour >= 8 && hour < 9) {
 		hourChecked = "Ça va " + authorMessage + " ? J'espère que tu vas tout doucement commencer à te mettre au travail. Certains de tes collègues ont déjà commencés, eux. \n\nJe ne te juge pas, bien sûr. Tu sais, moi-même j'ai pris un chemin différent des autres. Je ne le regrette pas tu sais, ma vie a été bien remplie et puis je n'ai pas vraiment choisi au final. Mais j'adore Poudlard !\n\nOula, je m'égare un peu. En plus, je dois y aller, ";
 		messageIntro = "Bonjour !"
 	}
 
-	if (hour >= 10 && hour < 12) {
+	if (hour >= 9 && hour < 11) {
 		hourChecked = "J'espère que tu passes une bonne journée " + authorMessage + " et que tu travailles sur plein de projets ! \n\nOh, mais c'est bientôt la pause midi ! J'ai hâte ! Je commence à avoir un peu faim. \n\n Je dois te laisser, ";
 		messageIntro = "Bonjour !"
 	}
 
-	if (hour >= 12 && hour < 16) {
+	if (hour >= 11 && hour < 15) {
 		hourChecked = "J'espère que tu passes une bonne journée " + authorMessage + " et que tu travailles sur plein de projets ! \n\nOh, mais c'est bientôt l'heure du goûter ! J'ai hâte je commence à avoir un peu faim.\n\n Je dois te laisser, ";
 		messageIntro = "Bonjour !"
 	}
 
-	if (hour >= 16 && hour < 18) {
+	if (hour >= 15 && hour < 17) {
 		hourChecked = "Tu m'appeles un peu tard aujourd'hui," + authorMessage +", c'est presque la fin de la journée. \n\nEnfin, ce n'est pas grave, j'espère que tu as passé une bonne journée !\n\nJe ne vais pas trainer, ";
 		messageIntro = "Bonjour  !"
 	}
 
-	if (hour >= 18 && hour < 24) {
+	if (hour >= 17 && hour < 23) {
 		hourChecked = "Mais attends... Tu es encore là "+ authorMessage +" ? Tu sais que tu peux arrêter de travailler. Il faut aussi penser à te reposer !\n\nEnfin bref, je ne peux par rester, ";
 		messageIntro = "Bonsoir !"
 	}
