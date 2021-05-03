@@ -12,9 +12,6 @@ client.on("ready", ()=>{
 var excuse = ["Buck s'est enfui.", "mon araignée géante s'est encore perdue.", "Dumbledore a besoin de moi.", "j'ai laissé une soupe sur le feu.", "il parait que Norbert est une fille maintenant.", "je n'ai pas fini mon épisode de la Boulangerie Graphique. Je suis fan !", "un serpentard s'amuse à dessiner des cochons-bite partout !", "Stéphane Bern a porté plainte contre une élève pour photoshop non autorisé sur sa personne."]
 var pickExcuse = "Dumbledore a besoin de moi.";
 var hourChecked;
-var today = new Date();
-// var hour = 10;
-var hour = today.getHours();
 var messageIntro = "Bonjour !";
 var authorMessage;
 
@@ -87,6 +84,9 @@ function randomExcuse(){
 }
 
 function checkHour(){
+	var today = new Date();
+	// var hour = 10;
+	var hour = today.getHours();
 	if (hour < 6 ) {
 		hourChecked = "Qui me réveille à cette heure ? Ah mais c'est toi " + authorMessage +" ! Bonjour, je te souhaite une bonne journée. N'hésite pas à dormir plus longtemps la prochaine fois.\n\nTu sais, l'avenir appartient à ceux qui rrrrzzzzzzzzzzzzzz.\n\nHein ?! Quoi?! Oh, mais j'y pense, je dois te laisser, ";
 		messageIntro = "Rrrrrrzzzz... Hein ?"
@@ -113,7 +113,7 @@ function checkHour(){
 	}
 
 	if (hour >= 12 && hour < 16) {
-		hourChecked = "J'espère que tu passez une bonne journée " + authorMessage + " et que tu travailles sur plein de projets ! \n\nOh, mais c'est bientôt l'heure du goûter ! J'ai hâte je commence à avoir un peu faim.\n\n Je dois te laisser, ";
+		hourChecked = "J'espère que tu passes une bonne journée " + authorMessage + " et que tu travailles sur plein de projets ! \n\nOh, mais c'est bientôt l'heure du goûter ! J'ai hâte je commence à avoir un peu faim.\n\n Je dois te laisser, ";
 		messageIntro = "Bonjour !"
 	}
 
