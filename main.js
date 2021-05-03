@@ -58,7 +58,7 @@ async function gotMessage(message){
 			// .setFooter("Où est-ce que j'ai mis ma baguette ?")
 			.setURL('https://coworcoeur.blandeen.com/')
 			.setTitle(messageIntro)
-			.setDescription(hourChecked+ pickExcuse +' \n\nVoici ton GIF.\n\n Bisous \:heart: \:closed_umbrella:' +hour)          
+			.setDescription(hourChecked+ pickExcuse +' \n\nVoici ton GIF.\n\n Bisous \:heart: \:closed_umbrella:')          
 		);
 
 		message.channel.send(gif);
@@ -109,12 +109,12 @@ function checkHour(){
 		messageIntro = "Bonjour !"
 	}
 
-	if (hour >= 8 && hour < 10) {
+	if (hour >= 8 && hour < 11) {
 		hourChecked = "J'espère que tu passes une bonne journée " + authorMessage + " et que tu travailles sur plein de projets ! \n\nOh, mais c'est bientôt la pause midi ! J'ai hâte ! Je commence à avoir un peu faim. \n\n Je dois te laisser, ";
 		messageIntro = "Bonjour !"
 	}
 
-	if (hour >= 10 && hour < 14) {
+	if (hour >= 11 && hour < 14) {
 		hourChecked = "J'espère que tu passes une bonne journée " + authorMessage + " et que tu travailles sur plein de projets ! \n\nOh, mais c'est bientôt l'heure du goûter ! J'ai hâte je commence à avoir un peu faim.\n\n Je dois te laisser, ";
 		messageIntro = "Bonjour !"
 	}
