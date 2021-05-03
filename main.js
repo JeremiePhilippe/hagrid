@@ -94,37 +94,37 @@ function checkHour(){
 		messageIntro = "Rrrrrrzzzz... Hein ?"
 	}
 
-	if (hour >= 5 && hour < 7) {
+	if (hour >= 4 && hour < 6) {
 		hourChecked = "Comment vas-tu " + authorMessage + " ? Tu es bien matinal.e aujourd'hui ! J'espère que tu es quand même assez reposé.es pour travailler. \n\nJe te souhaite une bonne journée, remplie de projets. Quant à moi, je te laisse, ";
 		messageIntro = "Bonjour !"
 	}
 
-	if (hour >= 7 && hour < 8) {
+	if (hour >= 6 && hour < 7) {
 		hourChecked = "J'espère que tu vas bien"+ authorMessage +". Il est bientôt 9h, il va falloir se mettre au travail. \n\nJe te souhaite une bonne journée, remplie de projet. Quant à moi, je te laisse, ";
 		messageIntro = "Bonjour !"
 	}
 
-	if (hour >= 8 && hour < 9) {
+	if (hour >= 7 && hour < 8) {
 		hourChecked = "Ça va " + authorMessage + " ? J'espère que tu vas tout doucement commencer à te mettre au travail. Certains de tes collègues ont déjà commencés, eux. \n\nJe ne te juge pas, bien sûr. Tu sais, moi-même j'ai pris un chemin différent des autres. Je ne le regrette pas tu sais, ma vie a été bien remplie et puis je n'ai pas vraiment choisi au final. Mais j'adore Poudlard !\n\nOula, je m'égare un peu. En plus, je dois y aller, ";
 		messageIntro = "Bonjour !"
 	}
 
-	if (hour >= 9 && hour < 11) {
+	if (hour >= 8 && hour < 10) {
 		hourChecked = "J'espère que tu passes une bonne journée " + authorMessage + " et que tu travailles sur plein de projets ! \n\nOh, mais c'est bientôt la pause midi ! J'ai hâte ! Je commence à avoir un peu faim. \n\n Je dois te laisser, ";
 		messageIntro = "Bonjour !"
 	}
 
-	if (hour >= 11 && hour < 15) {
+	if (hour >= 10 && hour < 14) {
 		hourChecked = "J'espère que tu passes une bonne journée " + authorMessage + " et que tu travailles sur plein de projets ! \n\nOh, mais c'est bientôt l'heure du goûter ! J'ai hâte je commence à avoir un peu faim.\n\n Je dois te laisser, ";
 		messageIntro = "Bonjour !"
 	}
 
-	if (hour >= 15 && hour < 17) {
+	if (hour >= 14 && hour < 16) {
 		hourChecked = "Tu m'appeles un peu tard aujourd'hui," + authorMessage +", c'est presque la fin de la journée. \n\nEnfin, ce n'est pas grave, j'espère que tu as passé une bonne journée !\n\nJe ne vais pas trainer, ";
 		messageIntro = "Bonjour  !"
 	}
 
-	if (hour >= 17 && hour < 23) {
+	if (hour >= 16 && hour < 22) {
 		hourChecked = "Mais attends... Tu es encore là "+ authorMessage +" ? Tu sais que tu peux arrêter de travailler. Il faut aussi penser à te reposer !\n\nEnfin bref, je ne peux par rester, ";
 		messageIntro = "Bonsoir !"
 	}
