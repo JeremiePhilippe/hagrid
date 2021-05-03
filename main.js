@@ -14,6 +14,8 @@ var pickExcuse = "Dumbledore a besoin de moi.";
 var hourChecked;
 var messageIntro = "Bonjour !";
 var authorMessage;
+var today;
+var hour;
 
 var gif = 'https://media1.tenor.com/images/ed06a57e1a9ac68bc80295b3e2859734/tenor.gif?itemid=13830351';
 
@@ -84,9 +86,9 @@ function randomExcuse(){
 }
 
 function checkHour(){
-	var today = new Date();
+	today = new Date();
 	// var hour = 10;
-	var hour = today.getHours();
+	hour = today.getHours();
 	if (hour < 6 ) {
 		hourChecked = "Qui me réveille à cette heure ? Ah mais c'est toi " + authorMessage +" ! Bonjour, je te souhaite une bonne journée. N'hésite pas à dormir plus longtemps la prochaine fois.\n\nTu sais, l'avenir appartient à ceux qui rrrrzzzzzzzzzzzzzz.\n\nHein ?! Quoi?! Oh, mais j'y pense, je dois te laisser, ";
 		messageIntro = "Rrrrrrzzzz... Hein ?"
