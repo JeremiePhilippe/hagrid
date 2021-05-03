@@ -108,7 +108,7 @@ function checkHour(){
 	}
 
 	if (hour >= 10 && hour < 12) {
-		hourChecked = "J'espère que tu passez une bonne journée " + authorMessage + " et que tu travailles sur plein de projets ! \n\nOh, mais c'est bientôt la pause midi ! J'ai hâte ! Je commence à avoir un peu faim. \n\n Je dois te laisser, ";
+		hourChecked = "J'espère que tu passes une bonne journée " + authorMessage + " et que tu travailles sur plein de projets ! \n\nOh, mais c'est bientôt la pause midi ! J'ai hâte ! Je commence à avoir un peu faim. \n\n Je dois te laisser, ";
 		messageIntro = "Bonjour !"
 	}
 
