@@ -9,11 +9,6 @@ client.on("ready", ()=>{
 	console.log("Salut les p'tits potes!")
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
-
 var excuse = ["Buck s'est enfui.", "mon araignée géante s'est encore perdue.", "Dumbledore a besoin de moi.", "j'ai laissé une soupe sur le feu.", "il parait que Norbert est une fille maintenant.", "je n'ai pas fini mon épisode de la Boulangerie Graphique. Je suis fan !", "un serpentard s'amuse à dessiner des cochons-bite partout !", "Stéphane Bern a porté plainte contre une élève pour photoshop non autorisé sur sa personne."]
 var pickExcuse = "Dumbledore a besoin de moi.";
 var hourChecked;
