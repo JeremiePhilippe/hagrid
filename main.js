@@ -9,7 +9,7 @@ client.on("ready", ()=>{
 	console.log("Salut les p'tits potes!")
 });
 
-var excuse = ["Buck s'est enfui.", "mon araignée géante s'est encore perdue.", "Dumbledore a besoin de moi.", "j'ai laissé une soupe sur le feu.", "il parait que Norbert est une fille maintenant.", "je n'ai pas fini mon épisode de la Boulangerie Graphique. Je suis fan !", "un serpentard s'amuse à dessiner des cochons-bite partout !", "Stéphane Bern a porté plainte contre une élève pour photoshop non autorisé sur sa personne."]
+var excuse = ["Buck s'est enfui.", "mon araignée géante s'est encore perdue.", "Dumbledore a besoin de moi.", "j'ai laissé une soupe sur le feu.", "il parait que Norbert est une fille maintenant.", "je n'ai pas fini mon épisode de la Boulangerie Graphique. Je suis fan !", "un serpentard s'amuse à dessiner des cochons-bite partout !", "Stéphane Bern a porté plainte contre une élève pour photoshop non autorisé sur sa personne.", "je suis à la prison d'azkaban.", "aragog a faim.", "mon podcast préféré fait un live sur Twitch. Ça a crash, mais je garde espoir.", "je dois aller faire un Gartic Phone"]
 var pickExcuse = "Dumbledore a besoin de moi.";
 var hourChecked;
 var messageIntro = "Bonjour !";
@@ -27,7 +27,29 @@ async function gotMessage(message){
 	let token = message.content.split(" ");
 
 	if (message.author === client.user || message.author.bot) return; //If hagrid or a bot do command, do nothing
-	if ((token[0] + " " + token[1]) === `Bonjour <@!${client.user.id}>` || (token[0] + " " + token[1])  === `bonjour <@!${client.user.id}>`) {
+
+	if ((token[0] + " " + token[1]) === `Bonjour <@!${client.user.id}>` || (token[0] + " " + token[1])  === `bonjour <@!${client.user.id}>`){
+		return message.channel.send(`La commande a changé <@!${message.author.id}>. Maintenant c'est $bonjour`);
+	}
+
+	if (!message.content.startsWith(config.prefix)) return;
+
+	const args = message.content.slice(config.prefix.length).trim().split(/ +/);
+	const command = args.shift().toLowerCase();
+
+	if (command==="café"){
+		return message.channel.send(`Voici ton café <@!${message.author.id}> \n \:coffee:`);
+	}
+
+	if (command==="thé"){
+		return message.channel.send(`Voici ton thé <@!${message.author.id}> \n \:tea:`);
+	}
+
+	if (command==="binouze"){
+		return message.channel.send(`P'tite bière ? <@!${message.author.id}> \n \:beer:`);
+	}
+
+	if (command==="bonjour"){
 		authorMessage = `<@!${message.author.id}>`
 		randomExcuse();
 		checkHour();
@@ -36,8 +58,8 @@ async function gotMessage(message){
 
 		let keyword = "hello"	
 
-		if (token.length > 2){
-			keyword = token.slice(2, token.length).join(" ");
+		if (token.length > 1){
+			keyword = token.slice(1, token.length).join(" ");
 		}
 
 		let url = `https://g.tenor.com/v1/search?q=`+keyword+`&key=${process.env.TENORKEY}&ContentFilter=high`
@@ -58,25 +80,30 @@ async function gotMessage(message){
 			// .setFooter("Où est-ce que j'ai mis ma baguette ?")
 			.setURL('https://coworcoeur.blandeen.com/')
 			.setTitle(messageIntro)
-			.setDescription(hourChecked+ pickExcuse +' \n\nVoici ton GIF.\n\n Bisous \:heart: \:closed_umbrella:')          
+			.setDescription(hourChecked+ pickExcuse +' \n\nVoici ton GIF.\n\nBisous \:heart: \:closed_umbrella:')          
 		);
 
 		message.channel.send(gif);
 	}
 
+	if (command==="gif"){
+		let keyword = "hello"	
 
-	if (!message.content.startsWith(config.prefix)) return;
+		if (token.length > 1){
+			keyword = token.slice(1, token.length).join(" ");
+		}
 
-	const args = message.content.slice(config.prefix.length).trim().split(/ +/);
-	const command = args.shift().toLowerCase();
-
-	if (command==="café"){
-		return message.channel.send(`Voici ton café <@!${message.author.id}> \n \:coffee:`);
+		let url = `https://g.tenor.com/v1/search?q=`+keyword+`&key=${process.env.TENORKEY}&ContentFilter=high`
+		// console.log(url);
+		let response = await fetch(url);
+		let json = await response.json();
+		const index = Math.floor(Math.random() * json.results.length);
+		// console.log(json)
+		gif = json.results[index].url;
+		// console.log(gif);
+		message.channel.send("Voici ton GIF\n" + gif);
 	}
 
-	if (command==="thé"){
-		return message.channel.send(`Voici ton thé <@!${message.author.id}> \n \:tea:`);
-	}
 
 };
 
@@ -120,7 +147,7 @@ function checkHour(){
 	}
 
 	if (hour >= 14 && hour < 16) {
-		hourChecked = "Tu m'appeles un peu tard aujourd'hui," + authorMessage +", c'est presque la fin de la journée. \n\nEnfin, ce n'est pas grave, j'espère que tu as passé une bonne journée !\n\nJe ne vais pas trainer, ";
+		hourChecked = "Tu m'appelles un peu tard aujourd'hui," + authorMessage +", c'est presque la fin de la journée. \n\nEnfin, ce n'est pas grave, j'espère que tu as passé une bonne journée !\n\nJe ne vais pas trainer, ";
 		messageIntro = "Bonjour  !"
 	}
 
