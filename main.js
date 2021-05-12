@@ -41,6 +41,10 @@ async function gotMessage(message){
 		return message.channel.send(`Voici ton café <@!${message.author.id}> \n \:coffee:`);
 	}
 
+	if (command==="déca"){
+		return message.channel.send(`Voilà ton déca <@!${message.author.id}> \n \:coffee:`);
+	}
+
 	if (command==="thé"){
 		return message.channel.send(`Voici ton thé <@!${message.author.id}> \n \:tea:`);
 	}
@@ -50,7 +54,8 @@ async function gotMessage(message){
 	}
 
 	if (command==="anecdote"){
-		return message.channel.send(`Raconte-nous tout <@!${message.author.id}> \nhttps://media1.tenor.com/images/2df5b0ed02c276bdd01b5c0cf5391155/tenor.gif?itemid=21529091`);
+		return message.channel.send(`Raconte-nous tout <@!${message.author.id}>`);
+		return message.channel.send(`https://tenor.com/bCuRz.gif`);
 	}
 
 	if (command==="bonjour"){
