@@ -54,8 +54,7 @@ async function gotMessage(message){
 	}
 
 	if (command==="anecdote"){
-		message.channel.send(`Raconte-nous tout <@!${message.author.id}>`);
-		message.channel.send(`https://tenor.com/bCuRz.gif`);
+		return message.channel.send(`https://tenor.com/bCuRz.gif`);
 	}
 
 	if (command==="bonjour"){
