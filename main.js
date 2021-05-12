@@ -49,6 +49,10 @@ async function gotMessage(message){
 		return message.channel.send(`P'tite bière ? <@!${message.author.id}> \n \:beer:`);
 	}
 
+	if (command==="anecdote"){
+		return message.channel.send(`Raconte-nous tout <@!${message.author.id}> \nhttps://media1.tenor.com/images/2df5b0ed02c276bdd01b5c0cf5391155/tenor.gif?itemid=21529091`);
+	}
+
 	if (command==="bonjour"){
 		authorMessage = `<@!${message.author.id}>`
 		randomExcuse();
