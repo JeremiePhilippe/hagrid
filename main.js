@@ -50,7 +50,7 @@ async function gotMessage(message){
 		}
 
 
-		return message.channel.send(`Voici ton café `+ keyword + ` <@!${message.author.id}> \n \:coffee:`);
+		return message.channel.send(`Voici ton café `+ keyword + ` <@!${message.author.id}> \n\:coffee:`);
 	}
 
 	if (command==="déca"){
@@ -61,7 +61,7 @@ async function gotMessage(message){
 			keyword = token.slice(1, token.length).join(" ");
 		}
 
-		return message.channel.send(`Voilà ton déca ` +keyword+` <@!${message.author.id}> \n \:coffee:`);
+		return message.channel.send(`Voilà ton déca ` +keyword+` <@!${message.author.id}> \n\:coffee:`);
 	}
 
 	if (command==="thé"){
@@ -72,7 +72,7 @@ async function gotMessage(message){
 			keyword = token.slice(1, token.length).join(" ");
 		}
 
-		return message.channel.send(`Voici ton thé `+keyword+ ` <@!${message.author.id}> \n \:tea:`);
+		return message.channel.send(`Voici ton thé `+keyword+ ` <@!${message.author.id}> \n\:tea:`);
 
 
 	}
@@ -85,7 +85,7 @@ async function gotMessage(message){
 			keyword = token.slice(1, token.length).join(" ");
 		}
 
-		return message.channel.send(`Tu as l'air d'en avoir besoin, voici ton verre de: `+keyword+ ` <@!${message.author.id}> \n \:tumbler_glass:`);
+		return message.channel.send(`Tu as l'air d'en avoir besoin, voici ton verre de `+keyword+ ` <@!${message.author.id}> \n\:tumbler_glass:`);
 
 
 	}
@@ -98,13 +98,13 @@ async function gotMessage(message){
 			keyword = token.slice(1, token.length).join(" ");
 		}
 
-		return message.channel.send(`Et hop, un cocktail `+keyword+ ` pour <@!${message.author.id}> \n \:tropical_drink:`);
+		return message.channel.send(`Et hop, un cocktail `+keyword+ ` pour <@!${message.author.id}> \n\:tropical_drink:`);
 
 
 	}
 
 	if (command==="binouze"){
-		return message.channel.send(`P'tite bière ? <@!${message.author.id}> \n \:beer:`);
+		return message.channel.send(`P'tite bière ? <@!${message.author.id}> \n\:beer:`);
 	}
 
 	if (command==="anecdote"){
