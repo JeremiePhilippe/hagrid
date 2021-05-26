@@ -38,7 +38,19 @@ async function gotMessage(message){
 	const command = args.shift().toLowerCase();
 
 	if (command==="café"){
-		return message.channel.send(`Voici ton café <@!${message.author.id}> \n \:coffee:`);
+
+		let keyword = ""
+
+		if (token.length > 1){
+			keyword = token.slice(1, token.length).join(" ");
+		}
+
+		if (keyword == "au lait maternel") {
+			keyword = "NORMAL parce qu'il ne faut pas égagérer non plus..."
+		}
+
+
+		return message.channel.send(`Voici ton café `+ keyword + ` <@!${message.author.id}> \n \:coffee:`);
 	}
 
 	if (command==="déca"){
