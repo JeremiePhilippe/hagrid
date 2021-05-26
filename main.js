@@ -58,7 +58,16 @@ async function gotMessage(message){
 	}
 
 	if (command==="thé"){
-		return message.channel.send(`Voici ton thé <@!${message.author.id}> \n \:tea:`);
+
+		let keyword = ""
+
+		if (token.length > 1){
+			keyword = token.slice(1, token.length).join(" ");
+		}
+
+		return message.channel.send(`Voici ton thé `+keyword+ ` <@!${message.author.id}> \n \:tea:`);
+
+
 	}
 
 	if (command==="binouze"){
