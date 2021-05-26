@@ -54,7 +54,14 @@ async function gotMessage(message){
 	}
 
 	if (command==="déca"){
-		return message.channel.send(`Voilà ton déca <@!${message.author.id}> \n \:coffee:`);
+
+		let keyword = ""
+
+		if (token.length > 1){
+			keyword = token.slice(1, token.length).join(" ");
+		}
+
+		return message.channel.send(`Voilà ton déca ` +keyword+` <@!${message.author.id}> \n \:coffee:`);
 	}
 
 	if (command==="thé"){
@@ -66,6 +73,32 @@ async function gotMessage(message){
 		}
 
 		return message.channel.send(`Voici ton thé `+keyword+ ` <@!${message.author.id}> \n \:tea:`);
+
+
+	}
+
+	if (command==="alcool"){
+
+		let keyword = "breuvage alcoolisé"
+
+		if (token.length > 1){
+			keyword = token.slice(1, token.length).join(" ");
+		}
+
+		return message.channel.send(`Tu as l'air d'en avoir besoin, voici ton verre de: `+keyword+ ` <@!${message.author.id}> \n \:tumbler_glass:`);
+
+
+	}
+
+	if (command==="cocktail"){
+
+		let keyword = ""
+
+		if (token.length > 1){
+			keyword = token.slice(1, token.length).join(" ");
+		}
+
+		return message.channel.send(`Et hop, un cocktail `+keyword+ ` pour <@!${message.author.id}> \n \:tropical_drink:`);
 
 
 	}
