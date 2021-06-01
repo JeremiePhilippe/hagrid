@@ -39,18 +39,21 @@ async function gotMessage(message){
 
 	if (command==="café"){
 
-		let keyword = ""
-
-		if (token.length > 1){
-			keyword = token.slice(1, token.length).join(" ");
+		if(author.id == "274659596994347018"){
+			return message.channel.send("Non, toi t'es puni \:triumph:");
 		}
 
-		if (keyword == "au lait maternel") {
-			keyword = "NORMAL parce qu'il ne faut pas égagérer non plus..."
+		else{
+			if (token.length > 1){
+				keyword = token.slice(1, token.length).join(" ");
+			}
+
+			if (keyword == "au lait maternel") {
+				keyword = "NORMAL parce qu'il ne faut pas égagérer non plus..."
+			}
+
+			return message.channel.send(`Voici ton café `+ keyword + ` <@!${message.author.id}> \n\:coffee:`);
 		}
-
-
-		return message.channel.send(`Voici ton café `+ keyword + ` <@!${message.author.id}> \n\:coffee:`);
 	}
 
 	if (command==="déca"){
