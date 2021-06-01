@@ -39,8 +39,8 @@ async function gotMessage(message){
 
 	if (command==="café"){
 
-		if(author.id == "274659596994347018"){
-			return message.channel.send("Non, toi t'es puni \:triumph:");
+		if(message.author.id == "677511202619916288"){
+			return message.channel.send(`Non, toi t'es puni <@!${message.author.id}> \:triumph:`);
 		}
 
 		else{
