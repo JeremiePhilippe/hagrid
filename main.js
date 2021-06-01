@@ -100,11 +100,15 @@ async function gotMessage(message){
 
 		return message.channel.send(`Et hop, un cocktail `+keyword+ ` pour <@!${message.author.id}> \n\:tropical_drink:`);
 
-
 	}
+
 
 	if (command==="binouze"){
 		return message.channel.send(`P'tite bière ? <@!${message.author.id}> \n\:beer:`);
+	}
+
+	if (command==="chocolat"){
+		return message.channel.send(`Mais j'ai déjà dit que je ne savais pas faire de chocolat chaud <@!${message.author.id}> \:weary: Tu sais quoi ? Fait le toi-même, tiens !\n\:milk:\:chocolate_bar:`);
 	}
 
 	if (command==="anecdote"){
