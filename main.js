@@ -41,6 +41,10 @@ async function gotMessage(message){
 
 		let keyword = ""
 
+		// if(message.author.id == "677511202619916288"){
+		// 	return message.channel.send(`Non, toi t'es puni <@!${message.author.id}> \:triumph:`);
+		// }
+
 			if (token.length > 1){
 				keyword = token.slice(1, token.length).join(" ");
 			}
@@ -76,9 +80,9 @@ async function gotMessage(message){
 
 	}
 
-	if (command==="gcho"){
+	if (command==="boisson"){
 
-		let keyword = "";
+		let keyword = ""
 
 		if (token.length > 1){
 			keyword = token.slice(1, token.length).join(" ");
