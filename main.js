@@ -41,10 +41,6 @@ async function gotMessage(message){
 
 		let keyword = ""
 
-		// if(message.author.id == "677511202619916288"){
-		// 	return message.channel.send(`Non, toi t'es puni <@!${message.author.id}> \:triumph:`);
-		// }
-
 			if (token.length > 1){
 				keyword = token.slice(1, token.length).join(" ");
 			}
