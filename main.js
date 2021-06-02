@@ -45,7 +45,6 @@ async function gotMessage(message){
 		// 	return message.channel.send(`Non, toi t'es puni <@!${message.author.id}> \:triumph:`);
 		// }
 
-		else{
 			if (token.length > 1){
 				keyword = token.slice(1, token.length).join(" ");
 			}
@@ -55,7 +54,7 @@ async function gotMessage(message){
 			}
 
 			return message.channel.send(`Voici ton café `+ keyword + ` <@!${message.author.id}> \n\:coffee:`);
-		}
+		
 	}
 
 	if (command==="déca"){
