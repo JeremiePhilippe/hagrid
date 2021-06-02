@@ -82,7 +82,7 @@ async function gotMessage(message){
 
 	if (command==="gcho"){
 
-		let keyword;
+		let keyword = "";
 
 		if (token.length > 1){
 			keyword = token.slice(1, token.length).join(" ");
