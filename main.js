@@ -41,9 +41,9 @@ async function gotMessage(message){
 
 		let keyword = ""
 
-		if(message.author.id == "677511202619916288"){
-			return message.channel.send(`Non, toi t'es puni <@!${message.author.id}> \:triumph:`);
-		}
+		// if(message.author.id == "677511202619916288"){
+		// 	return message.channel.send(`Non, toi t'es puni <@!${message.author.id}> \:triumph:`);
+		// }
 
 		else{
 			if (token.length > 1){
@@ -113,7 +113,7 @@ async function gotMessage(message){
 	}
 
 	if (command==="chocolat"){
-		return message.channel.send(`Mais j'ai déjà dit que je ne savais pas faire de chocolat chaud <@!${message.author.id}> \:weary: Tu sais quoi ? Fait le toi-même, tiens !\n\:milk:\:chocolate_bar:`);
+		return message.channel.send(`Mais j'ai déjà dit que je ne savais pas faire de chocolat chaud <@!${message.author.id}> \:weary: Tu sais quoi ? Fais le toi-même, tiens !\n\:milk:\:chocolate_bar:`);
 	}
 
 	if (command==="anecdote"){
