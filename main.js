@@ -50,7 +50,7 @@ async function gotMessage(message){
 			}
 
 			if (keyword == "au lait maternel") {
-				keyword = "NORMAL parce qu'il ne faut pas égagérer non plus..."
+				keyword = "NORMAL parce qu'il ne faut pas éxagérer non plus..."
 			}
 
 			return message.channel.send(`Voici ton café `+ keyword + ` <@!${message.author.id}> \n\:coffee:`);
