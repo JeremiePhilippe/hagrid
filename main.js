@@ -78,6 +78,20 @@ async function gotMessage(message){
 
 		return message.channel.send(`Voici ton thé `+keyword+ ` <@!${message.author.id}> \n\:tea:`);
 
+	}
+
+	if (command==="gcho"){
+
+		let keyword;
+
+		if (token.length > 1){
+			keyword = token.slice(1, token.length).join(" ");
+			return message.channel.send(`Voici ton verre de `+keyword+ ` pour t'aider à tenir le coup <@!${message.author.id}> \n\:cup_with_straw:`);
+		}else{
+			return message.channel.send(`Voici une boisson fraîche faite maison pour t'aider à tenir le coup <@!${message.author.id}> \n\:cup_with_straw:`);
+		}
+
+		
 
 	}
 
