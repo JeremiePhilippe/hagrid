@@ -53,7 +53,8 @@ async function gotMessage(message){
 				keyword = "NORMAL parce qu'il ne faut pas éxagérer non plus..."
 			}
 
-			return message.channel.send(`Voici ton café `+ keyword + ` <@!${message.author.id}> \n\:coffee:`);
+			message.channel.send(`Voici ton café `+ keyword + ` <@!${message.author.id}>`);
+			message.channel.send(emoji("876742057929101332"));
 		
 	}
 
