@@ -65,7 +65,8 @@ async function gotMessage(message){
 			keyword = token.slice(1, token.length).join(" ");
 		}
 
-		return message.channel.send(`Voilà ton déca ` +keyword+` <@!${message.author.id}> \n\:coffee:`);
+		message.channel.send(`Voilà ton déca ` +keyword+` <@!${message.author.id}>`);
+		message.channel.send(emoji("876742057929101332"));
 	}
 
 	if (command==="thé"){
