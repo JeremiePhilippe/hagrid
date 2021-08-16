@@ -125,8 +125,17 @@ async function gotMessage(message){
 		return message.channel.send(`P'tite bière ? <@!${message.author.id}> \n\:beer:`);
 	}
 
-	if (command==="chocolat"){
-		return message.channel.send(`Mais j'ai déjà dit que je ne savais pas faire de chocolat chaud <@!${message.author.id}> \:weary: Tu sais quoi ? Fais le toi-même, tiens !\n\:milk:\:chocolate_bar:`);
+	if (command==="chocolatt"){
+
+		let keyword = ""
+
+		if (token.length > 1){
+			keyword = token.slice(1, token.length).join(" ");
+		}
+
+		message.channel.send(`Voici ton chocolat chaud `+keyword+ ` <@!${message.author.id}>`);
+		message.channel.send(emoji("876736316862246942"));
+		// return message.channel.send(`Mais j'ai déjà dit que je ne savais pas faire de chocolat chaud <@!${message.author.id}> \:weary: Tu sais quoi ? Fais le toi-même, tiens !\n\:milk:\:chocolate_bar:`);
 	}
 
 	if (command==="anecdote"){
@@ -190,6 +199,10 @@ async function gotMessage(message){
 
 
 };
+
+function emoji(id){
+	return client.emojis.cache.get(id).toString();
+}
 
 
 function randomExcuse(){
