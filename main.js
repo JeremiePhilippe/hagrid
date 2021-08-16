@@ -125,7 +125,7 @@ async function gotMessage(message){
 		return message.channel.send(`P'tite bière ? <@!${message.author.id}> \n\:beer:`);
 	}
 
-	if (command==="chocolatt"){
+	if (command==="chocolat"){
 
 		let keyword = ""
 
