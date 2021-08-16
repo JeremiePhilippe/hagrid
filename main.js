@@ -134,7 +134,7 @@ async function gotMessage(message){
 		}
 
 		message.channel.send(`Voici ton chocolat chaud `+keyword+ ` <@!${message.author.id}>`);
-		message.channel.send(emoji("876736316862246942"));
+		message.channel.send(emoji("876742057929101332"));
 		// return message.channel.send(`Mais j'ai déjà dit que je ne savais pas faire de chocolat chaud <@!${message.author.id}> \:weary: Tu sais quoi ? Fais le toi-même, tiens !\n\:milk:\:chocolate_bar:`);
 	}
 
